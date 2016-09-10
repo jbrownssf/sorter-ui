@@ -1,0 +1,23 @@
+<ion-view view-title="Optical Character Recognition">
+    <ion-nav-buttons></ion-nav-buttons>
+    
+    <ion-content class="padding">
+        <div class="subheader">
+            My Catalog
+        </div>
+        <button class="button button-full button-assertive" ng-click="viewCatalog()">
+            View Contents
+        </button>
+        <button class="button button-full button-assertive" ng-click="manageFails()">
+            Manage Unsure Cards
+        </button>
+        <button class="button button-full button-assertive" ng-click="runTest()">
+            Test Button?
+        </button>
+        <div class="card list" ng-repeat="device in devices" ng-click="bleConnect(device)">
+            <div ng-repeat="(key, value) in device">
+                {{key}}: {{value}}
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

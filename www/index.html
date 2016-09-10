@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="lib/ionic-platform-web-client/dist/ionic.io.bundle.min.js"></script>
+    <script src="lib/ngCordova/dist/ng-cordova.min.js"></script>
+    <script src="lib/jr-crop/dist/jr-crop.min.js"></script>
+    <script src="cordova.js"></script>
+
+    <!-- your app's js -->
+    <script src="js/ocrad.js"></script>
+    
+    <!--SSFServices-->
+    <script src="js/SSFConfig.js"></script>
+    <!--<script src="js/SSFServices/SSFDeploy.js"></script>-->
+    <script src="js/SSFServices/SSFAlerts.js"></script>
+    <script src="js/SSFServices/SSFCamera.js"></script>
+    <script src="js/SSFServices/SSFSpinner.js"></script>
+    <!--Services-->
+    <script src="js/services/CatalogServ.js"></script>
+    <script src="js/services/ScanCardServ.js"></script>
+    <script src="js/services/MatchingServ.js"></script>
+    <script src="js/services/BleServ.js"></script>
+    <!--Controllers-->
+    <script src="templates/landing/landing.js"></script>
+    <script src="templates/menu/menu.js"></script>
+    <script src="templates/catalog/cat-home/cat-home.js"></script>
+    <script src="templates/catalog/cat-fails/cat-fails.js"></script>
+    <script src="templates/catalog/cat-view/cat-view.js"></script>
+    
+    
+    <script src="js/app.js"></script>
+  </head>
+  <body ng-app="starter">
+    
+    <div>
+      <ion-nav-bar class="bar-dark app-bar-header">
+        <ion-nav-back-button>
+          {{&quot;&quot;}}
+        </ion-nav-back-button>
+      </ion-nav-bar>
+      <ion-nav-view></ion-nav-view>
+    </div>
+  </body>
+</html>

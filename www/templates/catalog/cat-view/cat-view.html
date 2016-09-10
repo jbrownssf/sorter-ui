@@ -1,0 +1,42 @@
+<ion-view view-title="Optical Character Recognition">
+    <ion-nav-buttons side="right">
+        <!-- TODO: create an add button that brings up an action menu on how to add cards -->
+        <button class="icon button button-right button-clear ion-plus-round" ng-click="show()">
+            
+        </button>
+    </ion-nav-buttons>
+    
+    <ion-content>
+        <ion-refresher on-refresh="doRefresh()">
+                 
+        </ion-refresher>
+        <div class="subheader padding">
+            My Cards
+        </div>
+        <ion-list can-swipe="listCanSwipe" ng-repeat="(setName, set) in cards">
+            <ion-item class="text-center">
+                {{setName}}
+            </ion-item>
+            <ion-item ng-repeat="(cardId, card) in set" ng-click="viewImage(card[2], card[0])">
+                <div class="row">
+                    <div class="col">
+                        {{card[0]}}
+                    </div>
+                    <div class="col col-10">
+                        {{card[1]}}
+                    </div>
+                </div>
+                <ion-option-button class="button button-assertive" ng-click="removeCard(setName, cardId)">
+                    <i class="icon ion-minus-round"></i>
+                </ion-option-button>
+                <ion-option-button class="button button-balanced" ng-click="addCard(card[0])">
+                    <i class="icon ion-plus-round"></i>
+                </ion-option-button>
+                <!--<ion-option-button class="button-positive ssf-button" ng-click="publish(schedule)">-->
+                <!--    {{schedule.state == 'published' ? 'Unpublish' : 'Publish'}}-->
+                <!--</ion-option-button>-->
+            </ion-item>
+        </ion-list>
+        {{errorText}}
+    </ion-content>
+</ion-view>
